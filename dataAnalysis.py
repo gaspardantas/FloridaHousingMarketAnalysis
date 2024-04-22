@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 
 # Function to fetch data from FRED API
 def fetch_fred_data(series_id, start_date, end_date):
-    api_key = "44c05ba66cbda1483c2817da0c32afc9"  # Replace 'YOUR_API_KEY' with your FRED API key
+    api_key = "YOUR_API_KEY"  # Replace 'YOUR_API_KEY' with your FRED API key
     url = f"https://api.stlouisfed.org/fred/series/observations?series_id={series_id}&api_key={api_key}&file_type=json&observation_start={start_date}&observation_end={end_date}"
     response = requests.get(url)
     data = response.json()
